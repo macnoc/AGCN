@@ -203,10 +203,6 @@ main article div:first-of-type{
   main article {
     order: 1;
   }
-
-  main article div {
-    padding: 0.5rem;
-  }
 }
 
 @media (max-width: 480px) {
