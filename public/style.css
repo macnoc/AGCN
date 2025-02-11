@@ -174,3 +174,53 @@ main article div{
 main article div:first-of-type{
   max-height: 30%;
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: space-between;
+  }
+
+  .nav {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav div {
+    width: 4rem;
+    height: 1.5rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main aside {
+    max-width: 100%;
+    order: 2;
+  }
+
+  main article {
+    order: 1;
+  }
+
+  main article div {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav div {
+    width: 3rem;
+    height: 1.2rem;
+  }
+
+  main article div {
+    padding: 0.25rem;
+  }
+}
