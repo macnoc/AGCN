@@ -159,6 +159,7 @@ main{
 main aside{
   flex: 1;
   max-width: 20%;
+  padding: 1rem;
 }
 main article{
   flex: 1;
