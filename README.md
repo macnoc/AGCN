@@ -6,6 +6,9 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
 
 **[View Demo](https://macnoc.github.io/AGCN/)**
 
+> [!NOTE]
+> Plesae note that this is a beta version and may contain bugs, incomplete features, or other issues. Please report any issues you encounter.
+
 ## Table of Contents
 
 - [Key Benefits](#key-benefits)
