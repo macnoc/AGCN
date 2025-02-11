@@ -234,8 +234,4 @@ main article div:first-of-type{
     width: 3rem;
     height: 1.2rem;
   }
-
-  main article div {
-    padding: 0.25rem;
-  }
 }
