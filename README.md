@@ -72,7 +72,7 @@ Notices are elements that can be placed anywhere on the page using the `data-ai-
 To use the widget via CDN, include the following script in your HTML file:
 
 ```html
-<script src="path/to/adcn.min.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/macnoc/ADCN@latest/dist/adcn.min.iife.js"></script>
 ```
 
 Then, initialize the widget with the following code:
