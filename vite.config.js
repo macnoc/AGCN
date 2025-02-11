@@ -7,7 +7,7 @@ export default defineConfig({
       emitCss: false,
       compilerOptions: {
         css: 'injected',
-        cssHash: ({ hash, css, name, filename }) => `adcn-${hash(css)}`
+        cssHash: ({ hash, css, name, filename }) => `agcn-${hash(css)}`
       }
     })
   ],
@@ -16,8 +16,8 @@ export default defineConfig({
     cssCodeSplit: false,
     lib: {
       entry: 'src/main.js',
-      name: 'ADCN',
-      fileName: 'adcn.min',
+      name: 'AGCN',
+      fileName: 'agcn.min',
       formats: ['iife']
     },
     rollupOptions: {

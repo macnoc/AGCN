@@ -5,13 +5,13 @@ import { deepMerge } from './js/utils'
 import Styles from './js/globalStyles'
 import Notice from './js/notice'
 
-class ADCN {
+class AGCN {
   constructor(config = {}) {
     new Styles();
 
     this.config = deepMerge(defaultConfig, config)
     this.container = document.createElement('div')
-    this.container.classList.add('adcn-container')
+    this.container.classList.add('agcn-container')
     document.body.appendChild(this.container)
 
     this.instance = new App({
@@ -57,7 +57,7 @@ class ADCN {
 
 // Development mode
 if (import.meta.env.DEV) {
-  new ADCN({
+  new AGCN({
     config: {
       badgePosition: "bottom-left"
     },
@@ -86,7 +86,7 @@ if (import.meta.env.DEV) {
 } else {
   // Production mode
   // @ts-ignore
-  window.ADCN = ADCN
+  window.AGCN = AGCN
 }
 
-export default ADCN
+export default AGCN

@@ -1,4 +1,4 @@
-.adcn-container {
+.agcn-container {
   --main-color: #0ea5e9;
   --text-color: #0f172a;
 
@@ -19,7 +19,7 @@
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 @media (prefers-color-scheme: dark) {
-    .adcn-container{
+    .agcn-container{
       --text-color: #E2E8F0;
 
       --badge-bg-color: #F1F5F9;
@@ -37,7 +37,7 @@
     }
   }
 
-.adcn-container * {
+.agcn-container * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,10 +47,10 @@
   font-size: 0.9rem;
   color: var(--text-color);
 }
-.adcn-container .details p {
+.agcn-container .details p {
   margin-bottom: 1rem;
 }
-.adcn-container .details p:last-of-type {
+.agcn-container .details p:last-of-type {
   margin-bottom: 0px;
 }
 
@@ -58,7 +58,7 @@
 
 
 
-.adcn-notice,
+.agcn-notice,
 :host {
   /* Reset box model */
   all: initial;
@@ -108,34 +108,34 @@
 }
 
 /* Reset all elements inside the widget */
-.adcn-notice *:not(svg),
+.agcn-notice *:not(svg),
 :host *:not(svg) {
   all: revert;
   box-sizing: border-box;
 }
 
-.adcn-notice {
+.agcn-notice {
   --bg-color: #f1f5f9;
   --border-color: #cbd5e1;
   --text-color: #64748B;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 @media (prefers-color-scheme: dark) {
-  .adcn-notice {
+  .agcn-notice {
     --bg-color: #1e293b;
     --border-color: #334155;
     --text-color: #e2e8f0;
   }
 }
 
-.adcn-notice {
+.agcn-notice {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.adcn-notice .notice,
-.adcn-notice .notice:visited {
+.agcn-notice .notice,
+.agcn-notice .notice:visited {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +150,7 @@
   padding: 0.3rem 0.4rem;
   text-decoration: none;
 }
-.adcn-notice .notice:hover,
-.adcn-notice .notice:focus {
+.agcn-notice .notice:hover,
+.agcn-notice .notice:focus {
   text-decoration: underline;
 }
