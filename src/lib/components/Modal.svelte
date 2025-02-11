@@ -147,6 +147,7 @@
   .heading {
     font-size: 1.1rem;
     font-weight: normal;
+    line-height: normal;
   }
   .close {
     margin: 0;

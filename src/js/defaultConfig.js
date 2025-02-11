@@ -8,7 +8,7 @@ const defaultConfig = {
         en: {
             header: "AI Contributions on This Page",
             title: "Our AI Helps Improve Your Experience",
-            body: "'This website uses AI to enhance the user experience. AI helps generate, modify, personalize, recommend, and assist in creating content.'",
+            body: "This website uses AI to enhance the user experience. AI helps generate, modify, personalize, recommend, and assist in creating content.",
             sectionsHeader: "Below are some ways AI contributes to your experience:",
             notices: {
                 generated: "AI generated content",
