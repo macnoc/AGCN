@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo"></div>
+        <div class="nav">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </header>
+      <main>
+        <aside data-ai-content="generated"></aside>
+        <article>
+          <div><button onclick="widget.update({config: {language: 'sv'}})">Open</button></div>
+          <div data-ai-content="assisted">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minus nihil ab ex, debitis quaerat iure eaque atque illum veritatis sunt, numquam quos id hic quam similique maxime explicabo in.</p>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <script src="src/agcn.min.iife.js"></script>
+    <script>
+      const widget = new AGCN({
+        config: {
+          badgePosition: "bottom-left",
+        },
+        content: {
+          en: {
+            sections: [
+              {
+                title: "Personalized Content Suggestions",
+                body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam libero perspiciatis ratione rerum iste velit amet sed vitae deleniti, dicta officia adipisci dolore porro voluptatibus facere provident. Repellat, exercitationem eos!",
+              },
+              {
+                title: "Enhanced Search Capabilities",
+                body: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>`,
+              },
+              {
+                title: "Automated Customer Support",
+                body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam libero perspiciatis ratione rerum iste velit amet sed vitae deleniti, dicta officia adipisci dolore porro voluptatibus facere provident. Repellat, exercitationem eos!",
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
