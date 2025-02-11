@@ -12,7 +12,6 @@ export default defineConfig({
     })
   ],
   build: {
-    // outDir: 'test/src',
     cssCodeSplit: false,
     lib: {
       entry: 'src/main.js',
@@ -21,9 +20,22 @@ export default defineConfig({
       formats: ['iife']
     },
     rollupOptions: {
-      output: {
-        extend: true
-      }
+      output: [
+        {
+          extend: true,
+          dir: 'dist',
+          entryFileNames: 'agcn.min.js',
+          name: 'AGCN',
+          format: 'iife'
+        },
+        {
+          extend: true,
+          dir: 'docs/src',
+          entryFileNames: 'agcn.min.js',
+          name: 'AGCN',
+          format: 'iife'
+        }
+      ]
     }
   }
 });

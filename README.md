@@ -84,7 +84,7 @@ You can include AGCN in your project by linking directly to the CDN or by downlo
 Add this to your HTML before the closing `</body>` tag:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/macnoc/AGCN@latest/dist/agcn.min.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/macnoc/AGCN@latest/dist/agcn.min.js"></script>
 ```
 
 ### Local Installation
@@ -92,7 +92,7 @@ Add this to your HTML before the closing `</body>` tag:
 2.	Link to the script in your HTML file:
 
 ```html
-<script src="path/to/agcn.min.iife.js"></script>
+<script src="path/to/agcn.min.js"></script>
 ```
 
 ## Usage
