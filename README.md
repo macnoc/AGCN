@@ -269,7 +269,7 @@ The `destroy` method removes the badge from the screen and cleans up event liste
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. Please support the project by giving it a star if you find it useful 😀.s
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. Please support the project by giving it a star if you find it useful 😀.
 
 ## License
 
