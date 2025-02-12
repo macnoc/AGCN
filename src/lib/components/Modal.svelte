@@ -146,7 +146,7 @@
     gap: 0.5rem;
   }
   .heading {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: normal;
     line-height: normal;
   }
@@ -162,6 +162,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--modal-color);
   }
   .close:hover {
     background-color: color-mix(in srgb, var(--modal-bg-color) 90%, black);
@@ -178,7 +179,7 @@
     max-height: 100%;
   }
   .icon-wrapper {
-    padding: 0.7rem;
+    padding: 0.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
