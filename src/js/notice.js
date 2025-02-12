@@ -5,8 +5,19 @@ class Notice {
     constructor(props) {
         let aiContentEl = document.querySelectorAll('[data-ai-content]');
         aiContentEl.forEach(element => {
+            // @ts-ignore
+            let position = element.dataset.agcnPosition;
+
+            let classes = {
+                left: "notice-left",
+                right: "notice-right",
+                center: "notice-center",
+            };
+
+            position = classes[position] || "notice-left";
+
             let container = document.createElement('div')
-            container.classList.add('agcn-reset', 'agcn-variables', 'agcn-notice')
+            container.classList.add('agcn-reset', 'agcn-variables', 'agcn-notice', position)
             element.appendChild(container)
 
             new NoticeElement({
@@ -15,6 +26,7 @@ class Notice {
                     config: props.config,
                     // @ts-ignore
                     notice: element.dataset.aiContent,
+                    position: position,
                     openModal: () => {
                         props.openModal();
                     },

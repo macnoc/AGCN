@@ -96,8 +96,18 @@
 
 .agcn-notice {
   display: flex;
-  justify-content: center;
   align-items: center;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+.agcn-notice.notice-left{
+  justify-content: flex-start;
+}
+.agcn-notice.notice-right{
+  justify-content: flex-end;
+}
+.agcn-notice.notice-center{
+  justify-content: center;
 }
 
 .agcn-notice .notice,

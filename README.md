@@ -26,6 +26,8 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
     - [Content object](#content)
     - [Sections object](#sections)
     - [Notices Configuration](#notices-configuration)
+- [Example](#example)
+- [Notice HTML Attribute](#notice-html-attribute)
 - [Styling](#styling)
     - [CSS Variables](#css-variables)
     - [Dark Mode](#dark-mode)
@@ -228,7 +230,19 @@ const widget = new AGCN(config: {
     }
 });
 ```
+## Notice HTML Attribute
 
+The notice element is a simple way to display AI-generated content notices on the page. You can add a notice to any element by adding the `data-ai-content` attribute with the notice type as the value. For example:
+
+```html
+<div data-ai-content="generated">...</div>
+```
+
+You can position the notice element by adding the `data-agcn-position` attribute with one of the following values:
+
+- `left` (default)
+- `right`
+- `center`
 
 ## Styling
 
