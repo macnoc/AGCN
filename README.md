@@ -280,11 +280,7 @@ The widget includes a dark mode with `prefers-color-scheme: dark` media query. Y
 
 ```css
 @media (prefers-color-scheme: dark) {
-    .agcn-container {
-        /* ... */
-    }
-
-    .agcn-notice {
+    .agcn-variables {
         /* ... */
     }
 }
