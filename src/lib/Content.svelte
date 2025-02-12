@@ -5,14 +5,14 @@
 </script>
 
 <h1>{title}</h1>
-<p>{@html body}</p>
+<p class="body">{@html body}</p>
 {#if sections}
   <p>{sectionsHeader}</p>
   <div class="sections">
     {#each sections as section}
       <Accordion>
         <div class="title" slot="head">{section.title}</div>
-        <div class="details" slot="details">
+        <div class="body" slot="details">
           {@html section.body}
         </div>
       </Accordion>

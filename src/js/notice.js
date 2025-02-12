@@ -6,7 +6,7 @@ class Notice {
         let aiContentEl = document.querySelectorAll('[data-ai-content]');
         aiContentEl.forEach(element => {
             let container = document.createElement('div')
-            container.classList.add('agcn-notice')
+            container.classList.add('agcn-reset', 'agcn-variables', 'agcn-notice')
             element.appendChild(container)
 
             new NoticeElement({

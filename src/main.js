@@ -11,7 +11,7 @@ class AGCN {
 
     this.config = deepMerge(defaultConfig, config)
     this.container = document.createElement('div')
-    this.container.classList.add('agcn-container')
+    this.container.classList.add('agcn-reset', 'agcn-variables', 'agcn-container')
     document.body.appendChild(this.container)
 
     this.instance = new App({

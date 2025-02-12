@@ -37,12 +37,12 @@
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a href="#" class="widget {badgePosition}" on:click|preventDefault={openModalHandler} role="button" aria-label="Open modal" title="Open Dialog">
+<a href="#" class="badge {badgePosition}" on:click|preventDefault={openModalHandler} role="button" aria-label="Open modal" title="Open Dialog">
   <Icon color="var(--badge-color)" />
 </a>
 
 <style>
-  .widget {
+  .badge {
     position: fixed;
     border: 1px solid var(--badge-border-color);
     background-color: var(--badge-bg-color);
@@ -53,52 +53,53 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 1000;
   }
-  .widget.top-right {
+  .badge.top-right {
     right: -10px;
     top: var(--badge-offset);
     border-top-left-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
     padding-right: calc(0.7rem + 6px);
   }
-  .widget.bottom-right {
+  .badge.bottom-right {
     right: -10px;
     bottom: var(--badge-offset);
     border-top-left-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
     padding-right: calc(0.7rem + 6px);
   }
-  .widget.top-left {
+  .badge.top-left {
     left: -10px;
     top: var(--badge-offset);
     border-top-right-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
     padding-left: calc(0.7rem + 6px);
   }
-  .widget.bottom-left {
+  .badge.bottom-left {
     left: -10px;
     bottom: var(--badge-offset);
     border-top-right-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
     padding-left: calc(0.7rem + 6px);
   }
-  .widget.top-right:hover,
-  .widget.bottom-right:hover {
+  .badge.top-right:hover,
+  .badge.bottom-right:hover {
     transform: translateX(-6px);
   }
-  .widget.top-right:active,
-  .widget.bottom-right:active {
+  .badge.top-right:active,
+  .badge.bottom-right:active {
     transform: scale(0.95) translateX(-6px);
   }
-  .widget.top-left:hover,
-  .widget.bottom-left:hover {
+  .badge.top-left:hover,
+  .badge.bottom-left:hover {
     transform: translateX(6px);
   }
-  .widget.top-left:active,
-  .widget.bottom-left:active {
+  .badge.top-left:active,
+  .badge.bottom-left:active {
     transform: scale(0.95) translateX(6px);
   }
-  .widget:active {
+  .badge:active {
     background-color: var(--badge-bg-color-hover);
     box-shadow: none;
   }

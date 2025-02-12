@@ -118,6 +118,7 @@
   }
   .modal {
     flex: 1;
+    color: var(--modal-color);
     max-width: 580px;
     max-height: calc(100vh - 2rem);
     overflow: hidden;
@@ -158,6 +159,9 @@
     cursor: pointer;
     border-radius: 0.5rem;
     transition: background-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .close:hover {
     background-color: color-mix(in srgb, var(--modal-bg-color) 90%, black);

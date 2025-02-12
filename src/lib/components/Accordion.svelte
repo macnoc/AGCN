@@ -40,14 +40,14 @@
     padding: 0.8rem 0.6rem;
   }
   .header:active {
-    background-color: var(--accordion-open-bg-color);
+    background-color: var(--modal-accordion-open-bg-color);
   }
   .accordion {
     border-top: 1px solid var(--modal-border-color);
     transition: all 0.2s ease-in-out;
   }
   .accordion.open {
-    background-color: var(--accordion-open-bg-color);
+    background-color: var(--modal-accordion-open-bg-color);
   }
   .details {
     padding: 0.8rem 0.6rem;

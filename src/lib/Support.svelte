@@ -15,7 +15,7 @@
     gap: 5px;
   }
   p{
-    color: var(--support-color);
+    color: var(--modal-support-color);
     font-size: 0.6rem;
     text-transform: uppercase;
     font-weight: 500;

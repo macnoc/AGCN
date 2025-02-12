@@ -239,32 +239,24 @@ The widget includes global styles for consistent design. You can customize the a
 The following CSS variables are available for customization:
 
 ```css
-.agcn-container {
-    --main-color: #0ea5e9;
-    --text-color: #0f172a;
+.agcn-variables{
+  --main-color: #0EA5E9;
+  --badge-color: #f1f5f9;
+  --badge-bg-color: #1e293b;
+  --badge-bg-color-hover: #0f172a;
+  --badge-border-color: #334155;
+  --badge-offset: 8rem;
 
-    --badge-bg-color: #1e293b;
-    --badge-color: #f1f5f9;
-    --badge-border-color: #334155;
-    --badge-bg-color-hover: #0f172a;
-    --badge-offset: 8rem;
+  --modal-color: #0ea5e9;
+  --modal-bg-color: #f8fafc;
+  --modal-border-color: #cbd5e1;
+  --modal-icon-color: #f1f5f9;
+  --modal-support-color: #94a3b8;
+  --modal-accordion-open-bg-color: #f1f5f9;
 
-    --modal-bg-color: #f8fafc;
-    --modal-border-color: #cbd5e1;
-    --modal-icon-color: #f1f5f9;
-
-    --support-color: #94a3b8;
-
-    --accordion-open-bg-color: #f1f5f9;
-
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.agcn-notice {
-    --bg-color: #f1f5f9;
-    --border-color: #cbd5e1;
-    --text-color: #64748B;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --notice-color: #64748b;
+  --notice-bg-color: #f1f5f9;
+  --notice-border-color: #cbd5e1;
 }
 ```
 
