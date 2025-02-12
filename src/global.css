@@ -87,6 +87,29 @@
   font-size: 0.9rem;
   line-height: 1.5;
 }
+.agcn-container .body a, .agcn-container .body a:visited {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.agcn-container .body a:hover, .agcn-container .body a:focus {
+  text-decoration: underline;
+}
+.agcn-container .body h1, .agcn-container .body h2, .agcn-container .body h3 {
+  font-weight: 600;
+
+}
+.agcn-container .body h1{
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.agcn-container .body h2{
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+.agcn-container .body h3{
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
 .agcn-container .body p {
   margin-bottom: 1rem;
 }

@@ -18,24 +18,24 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
 - [Information Modal](#information-modal)
 - [Notice Element](#notice)
 - [Installation](#installation)
-    - [CDN (Recommended)](#cdn-recommended)
-    - [Local Installation](#local-installation)
+  - [CDN (Recommended)](#cdn-recommended)
+  - [Local Installation](#local-installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-    - [Config object](#config)
-    - [Content object](#content)
-    - [Sections object](#sections)
-    - [Notices Configuration](#notices-configuration)
+  - [Config object](#config)
+  - [Content object](#content)
+  - [Sections object](#sections)
+  - [Notices Configuration](#notices-configuration)
 - [Example](#example)
 - [Notice HTML Attribute](#notice-html-attribute)
 - [Styling](#styling)
-    - [CSS Variables](#css-variables)
-    - [Dark Mode](#dark-mode)
+  - [CSS Variables](#css-variables)
+  - [Dark Mode](#dark-mode)
 - [AGCN class](#AGCN-class)
-    - [init(config | object)](#init)
-    - [update(config | object)](#update)
-    - [openModal()](#openModal)
-    - [destroy()](#destroy)
+  - [init(config | object)](#init)
+  - [update(config | object)](#update)
+  - [openModal()](#openModal)
+  - [destroy()](#destroy)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -48,7 +48,7 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
 ## Features
 
 - Easily integrates into any website.
-- Displays a notification banner when AI-generated content is detected.
+- Displays a notification banner beside AI-generated content.
 - Customizable appearance and message.
 
 ## Accessibility
@@ -95,8 +95,9 @@ Add this to your HTML before the closing `</body>` tag:
 ```
 
 ### Local Installation
-1.	Download the latest version from the [Releases](https://github.com/macnoc/AGCN).
-2.	Link to the script in your HTML file:
+
+1. Download the latest version from the [Releases](https://github.com/macnoc/AGCN).
+2. Link to the script in your HTML file:
 
 ```html
 <script src="path/to/agcn.min.js"></script>
@@ -116,12 +117,12 @@ You can customize the widget by passing a configuration object to the `AGCN` con
 
 ```javascript
 const widget = new AGCN({
-    config: {
-        //...
-    },
-    content: {
-        //...
-    }
+  config: {
+    //...
+  },
+  content: {
+    //...
+  },
 });
 ```
 
@@ -135,12 +136,12 @@ The widget can be configured using the following options:
 
 ### Config
 
-| Option | Type | Description | Default |
-| --- | --- | --- | --- |
-| `language` | `string` | The language to use for the widget. | `'en'` |
-| `showBadge` | `boolean` | Whether to show the badge on the screen. | `true` |
-| `badgePosition` | `string` | The position of the badge on the screen. | `'top-right'` |
-| `support` | `boolean` | Powered-by link to Macnoc. | `true` |
+| Option          | Type      | Description                              | Default       |
+| --------------- | --------- | ---------------------------------------- | ------------- |
+| `language`      | `string`  | The language to use for the widget.      | `'en'`        |
+| `showBadge`     | `boolean` | Whether to show the badge on the screen. | `true`        |
+| `badgePosition` | `string`  | The position of the badge on the screen. | `'top-right'` |
+| `support`       | `boolean` | Powered-by link to Macnoc.               | `true`        |
 
 ### Content
 
@@ -148,58 +149,59 @@ Each language has its own content configuration. For example, the English conten
 
 ```javascript
 const widget = new AGCN({
-    config: {
-        //...
+  config: {
+    //...
+  },
+  content: {
+    en: {
+      //...
     },
-    content: {
-        en: {
-            //...
-        },
-        fr: {
-            //...
-        }
-    }
+    fr: {
+      //...
+    },
+  },
 });
 ```
 
 The content object contains the following options:
 
-| Option | Type | Description | Default |
-| --- | --- | --- | --- |
-| `header` | `string` | The header text for the modal. | `'AI Contributions on This Page'` |
-| `title` | `string` | The title of the modal. | `'Our AI Helps Improve Your Experience'` |
-| `body` | `string` | The body text of the modal. Html is supported. | `'This website uses AI to enhance the user experience.'` |
-| `sectionsHeader` | `string` | The header text for the sections in the modal. | `'Below are some ways AI contributes to your experience:'` |
-| `sections` | `array` | An array of objects representing sections in the modal. | `[]` |
-| `notices` | `array` | An array of objects representing notices to display. | [See Notices Configuration](#notices-configuration) |
+| Option           | Type     | Description                                             | Default                                                    |
+| ---------------- | -------- | ------------------------------------------------------- | ---------------------------------------------------------- |
+| `header`         | `string` | The header text for the modal.                          | `'AI Contributions on This Page'`                          |
+| `title`          | `string` | The title of the modal.                                 | `'Our AI Helps Improve Your Experience'`                   |
+| `body`           | `string` | The body text of the modal. Html is supported.          | `'This website uses AI to enhance the user experience.'`   |
+| `sectionsHeader` | `string` | The header text for the sections in the modal.          | `'Below are some ways AI contributes to your experience:'` |
+| `sections`       | `array`  | An array of objects representing sections in the modal. | `[]`                                                       |
+| `notices`        | `array`  | An array of objects representing notices to display.    | [See Notices Configuration](#notices-configuration)        |
 
 ### Sections
 
 Each section object contains the following options:
 
-| Option | Type | Description | Default |
-| --- | --- | --- | --- |
-| `title` | `string` | The title of the section. | `'Section Title'` |
-| `body` | `string` | The content of the section. Html is supported. | `'Section content goes here.'` |
+| Option  | Type     | Description                                    | Default                        |
+| ------- | -------- | ---------------------------------------------- | ------------------------------ |
+| `title` | `string` | The title of the section.                      | `'Section Title'`              |
+| `body`  | `string` | The content of the section. Html is supported. | `'Section content goes here.'` |
 
 ## Notices Configuration
 
 The `notices` configuration allows you to customize the messages displayed by the AGCN widget for different types of AI-generated content. By default, the configuration includes the following notices:
 
-| Notice | Description |
-| --- | --- |
-| `generated` | AI generated content |
-| `modified` | AI modified content |
+| Notice         | Description             |
+| -------------- | ----------------------- |
+| `generated`    | AI generated content    |
+| `modified`     | AI modified content     |
 | `personalized` | AI personalized content |
-| `recommended` | AI recommended content |
-| `assisted` | AI assisted content |
+| `recommended`  | AI recommended content  |
+| `assisted`     | AI assisted content     |
 
 ## Example
 
 Here is an example of how to configure the widget with custom content:
 
 ```javascript
-const widget = new AGCN(config: {
+const widget = new AGCN({
+    config: {
         language: "en",
         support: true,
         showBadge: true
@@ -218,18 +220,20 @@ const widget = new AGCN(config: {
                 assisted: "AI assisted content"
             },
             sections: [
-          {
-            title: "Personalized Content Suggestions",
-            body: "Our AI algorithms analyze your browsing behavior to provide personalized content suggestions."
-          },
-            {
-                title: "Recommended Products",
-                body: "Our AI system recommends products based on your browsing history and preferences."
-            }
-        ]
+                {
+                    title: "Personalized Content Suggestions",
+                    body: "Our AI algorithms analyze your browsing behavior to provide personalized content suggestions."
+                },
+                {
+                    title: "Recommended Products",
+                    body: "Our AI system recommends products based on your browsing history and preferences."
+                }
+            ]
+        }
     }
 });
 ```
+
 ## Notice HTML Attribute
 
 The notice element is a simple way to display AI-generated content notices on the page. You can add a notice to any element by adding the `data-ai-content` attribute with the notice type as the value. For example:
@@ -253,8 +257,8 @@ The widget includes global styles for consistent design. You can customize the a
 The following CSS variables are available for customization:
 
 ```css
-.agcn-variables{
-  --main-color: #0EA5E9;
+.agcn-variables {
+  --main-color: #0ea5e9;
   --badge-color: #f1f5f9;
   --badge-bg-color: #1e293b;
   --badge-bg-color-hover: #0f172a;
@@ -280,9 +284,9 @@ The widget includes a dark mode with `prefers-color-scheme: dark` media query. Y
 
 ```css
 @media (prefers-color-scheme: dark) {
-    .agcn-variables {
-        /* ... */
-    }
+  .agcn-variables {
+    /* ... */
+  }
 }
 ```
 

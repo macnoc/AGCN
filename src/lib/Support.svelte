@@ -19,7 +19,6 @@
     font-size: 0.6rem;
     text-transform: uppercase;
     font-weight: 500;
-    padding-top: 2px;
   }
   a{
     display: inline-block;

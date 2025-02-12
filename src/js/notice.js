@@ -26,7 +26,6 @@ class Notice {
                     config: props.config,
                     // @ts-ignore
                     notice: element.dataset.aiContent,
-                    position: position,
                     openModal: () => {
                         props.openModal();
                     },

@@ -11,7 +11,7 @@
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a class="notice" href="#" on:click|preventDefault={() => openModal()}>
+<a class="notice" href="#" on:click|preventDefault={() => openModal()} title={content} aria-label={content}>
   <Icon size="0.7rem" color="var(--notice-color)" />
   <span>{content}</span>
 </a>

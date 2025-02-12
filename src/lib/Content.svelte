@@ -32,6 +32,5 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
-    border-bottom: 1px solid var(--modal-border-color);
   }
 </style>

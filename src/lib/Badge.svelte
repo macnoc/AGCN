@@ -7,29 +7,14 @@
 
   export let badgePosition;
 
-  onMount(async () => {
-    switch (badgePosition) {
-      case "top-right":
-        badgePosition = "top-right";
-        break;
+  let classes = {
+    "top-right": "top-right",
+    "bottom-right": "bottom-right",
+    "top-left": "top-left",
+    "bottom-left": "bottom-left",
+  };
 
-      case "bottom-right":
-        badgePosition = "bottom-right";
-        break;
-
-      case "top-left":
-        badgePosition = "top-left";
-        break;
-
-      case "bottom-left":
-        badgePosition = "bottom-left";
-        break;
-
-      default:
-        badgePosition = "top-right";
-        break;
-    }
-  });
+  let position = classes[badgePosition] || "top-right";
 
   const openModalHandler = () => {
     dispatch("openModal");
@@ -37,7 +22,7 @@
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a href="#" class="badge {badgePosition}" on:click|preventDefault={openModalHandler} role="button" aria-label="Open modal" title="Open Dialog">
+<a href="#" class="badge {position}" on:click|preventDefault={openModalHandler} role="button" aria-label="Open modal" title="Open Dialog">
   <Icon color="var(--badge-color)" />
 </a>
 
