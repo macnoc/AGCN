@@ -90,7 +90,7 @@
           </div>
           <div id="modal-title" class="heading">{title}</div>
         </div>
-        <button on:click|preventDefault={closeHandler} class="close" aria-label="Close dialog">
+        <button on:click|preventDefault={closeHandler} class="close" aria-label="Close dialog" title="Close Dialog">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
@@ -151,11 +151,16 @@
   }
   .close {
     margin: 0;
-    padding: 0;
+    padding: 0.4rem;
     box-sizing: border-box;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .close:hover {
+    background-color: color-mix(in srgb, var(--modal-bg-color) 90%, black);
   }
   .close svg {
     width: 1.4rem;

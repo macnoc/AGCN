@@ -8,7 +8,7 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-invalid-attribute -->
-  <a class="header" href="#" on:click|preventDefault={handleClick}>
+  <a class="header" href="#" role="button" aria-expanded={open} aria-controls="accordion-details" on:click|preventDefault={handleClick}>
     <slot name="head"></slot>
     {#if !open}
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
@@ -22,14 +22,15 @@
   </a>
 
   {#if open}
-    <div class="details" transition:slide>
+    <div id="accordion-details" class="details" transition:slide>
       <slot name="details"></slot>
     </div>
   {/if}
 </section>
 
 <style>
-  .header, .header:visited {
+  .header,
+  .header:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +39,7 @@
     text-decoration: none;
     padding: 0.8rem 0.6rem;
   }
-  .header:active{
+  .header:active {
     background-color: var(--accordion-open-bg-color);
   }
   .accordion {

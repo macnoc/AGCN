@@ -37,7 +37,7 @@
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a href="#" class="widget {badgePosition}" on:click|preventDefault={openModalHandler}>
+<a href="#" class="widget {badgePosition}" on:click|preventDefault={openModalHandler} role="button" aria-label="Open modal" title="Open Dialog">
   <Icon color="var(--badge-color)" />
 </a>
 
