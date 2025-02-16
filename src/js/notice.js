@@ -25,9 +25,9 @@ class Notice {
                 props: {
                     config: props.config,
                     // @ts-ignore
-                    notice: element.dataset.aiContent,
-                    openModal: () => {
-                        props.openModal();
+                    slug: element.dataset.aiContent,
+                    openModal: (slug) => {
+                        props.openModal(slug);
                     },
                 }
             });

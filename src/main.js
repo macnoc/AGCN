@@ -24,8 +24,8 @@ class AGCN {
 
     new Notice({
       config: this.config,
-      openModal: () => {
-        this.openModal();
+      openModal: (slug) => {
+        this.openModal(slug);
       }
     });
   }
@@ -48,9 +48,9 @@ class AGCN {
     }
   }
 
-  openModal() {
+  openModal(slug) {
     if (this.instance && this.instance.openModal) {
-      this.instance.openModal();
+      this.instance.openModal(slug);
     }
   }
 }
@@ -65,13 +65,32 @@ if (import.meta.env.DEV) {
       en: {
         sections: [
           {
+            slug: "test",
+            noticeText: "AI personalized content",
             title: "Personalized Content Suggestions",
             body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam libero perspiciatis ratione rerum iste velit amet sed vitae deleniti, dicta officia adipisci dolore porro voluptatibus facere provident. Repellat, exercitationem eos!"
           },
           {
+            slug: "test2",
+            noticeText: "Enhanced Search Capabilities",
             title: "Enhanced Search Capabilities",
             body: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
+              <ul>
+                <li>tegkethg</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</li>
+                <li>tegkethg</li>
+                <li><ul>
+                <li>tegkethg</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</li>
+                <li>tegkethg</li>
+              </ul></li>
+              </ul>
+              <ol>
+                <li>tegkethg</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</li>
+                <li>tegkethg</li>
+              </ol> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt laboriosam repudiandae voluptate accusantium fugiat amet est dolorum atque sapiente qui, maiores beatae, aut deserunt voluptatibus placeat explicabo odit necessitatibus!</p>`
           },

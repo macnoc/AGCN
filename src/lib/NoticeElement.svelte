@@ -3,15 +3,19 @@
 
   export let openModal;
   export let config;
-  export let notice;
+  export let slug;
 
-  let notices = config.content[config.config.language]?.notices || {};
-
-  let content = notices[notice] || config.content.en.notices[notice] || "Unknown";
+  let sections = config.content[config.config.language]?.sections;
+  
+  let content = Array.isArray(sections) 
+    ? sections.find(section => section.slug === slug)?.noticeText || slug 
+    : slug;
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a class="notice" href="#" on:click|preventDefault={() => openModal()} title={content} aria-label={content}>
+<a class="notice" href="#" on:click|preventDefault={() => openModal(slug)} title={content} aria-label={content}>
   <Icon size="0.7rem" color="var(--notice-color)" />
-  <span>{content}</span>
+  {#if content}
+    <span>{content}</span>
+  {/if}
 </a>

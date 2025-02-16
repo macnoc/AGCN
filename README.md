@@ -25,7 +25,6 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
   - [Config object](#config)
   - [Content object](#content)
   - [Sections object](#sections)
-  - [Notices Configuration](#notices-configuration)
 - [Example](#example)
 - [Notice HTML Attribute](#notice-html-attribute)
 - [Styling](#styling)
@@ -172,28 +171,17 @@ The content object contains the following options:
 | `body`           | `string` | The body text of the modal. Html is supported.          | `'This website uses AI to enhance the user experience.'`   |
 | `sectionsHeader` | `string` | The header text for the sections in the modal.          | `'Below are some ways AI contributes to your experience:'` |
 | `sections`       | `array`  | An array of objects representing sections in the modal. | `[]`                                                       |
-| `notices`        | `array`  | An array of objects representing notices to display.    | [See Notices Configuration](#notices-configuration)        |
 
 ### Sections
 
 Each section object contains the following options:
 
-| Option  | Type     | Description                                    | Default                        |
-| ------- | -------- | ---------------------------------------------- | ------------------------------ |
-| `title` | `string` | The title of the section.                      | `'Section Title'`              |
-| `body`  | `string` | The content of the section. Html is supported. | `'Section content goes here.'` |
-
-## Notices Configuration
-
-The `notices` configuration allows you to customize the messages displayed by the AGCN widget for different types of AI-generated content. By default, the configuration includes the following notices:
-
-| Notice         | Description             |
-| -------------- | ----------------------- |
-| `generated`    | AI generated content    |
-| `modified`     | AI modified content     |
-| `personalized` | AI personalized content |
-| `recommended`  | AI recommended content  |
-| `assisted`     | AI assisted content     |
+| Option        | Type     | Description                                          | Default                        |
+| --------------| -------- | -----------------------------------------------------| ------------------------------ |
+| `slug`        | `string` | The uniq id for the section                          | `''`                           |
+| `noticeText`  | `string` | The text shown in the notice linked to this section  | `''`                           |
+| `title`       | `string` | The title of the section.                            | `'Section Title'`              |
+| `body`        | `string` | The content of the section. Html is supported.       | `'Section content goes here.'` |
 
 ## Example
 
@@ -212,19 +200,16 @@ const widget = new AGCN({
             title: "Our AI Helps Improve Your Experience",
             body: "This website uses AI to enhance the user experience. AI helps generate, modify, personalize, recommend, and assist in creating content.",
             sectionsHeader: "Below are some ways AI contributes to your experience:",
-            notices: {
-                generated: "AI generated content",
-                modified: "AI modified content",
-                personalized: "AI personalized content",
-                recommended: "AI recommended content",
-                assisted: "AI assisted content"
-            },
             sections: [
                 {
+                    slug: "generated",
+                    noticeText: "AI Personalized Content"
                     title: "Personalized Content Suggestions",
                     body: "Our AI algorithms analyze your browsing behavior to provide personalized content suggestions."
                 },
                 {
+                    slug: "recommended",
+                    noticeText: "AI Recommended Content"
                     title: "Recommended Products",
                     body: "Our AI system recommends products based on your browsing history and preferences."
                 }
@@ -236,7 +221,7 @@ const widget = new AGCN({
 
 ## Notice HTML Attribute
 
-The notice element is a simple way to display AI-generated content notices on the page. You can add a notice to any element by adding the `data-ai-content` attribute with the notice type as the value. For example:
+The notice element is a simple way to display AI-generated content notices on the page. You can add a notice to any element by adding the `data-ai-content` attribute with the section slug as the value. For example:
 
 ```html
 <div data-ai-content="generated">...</div>
@@ -310,9 +295,13 @@ The `update` method updates the widget with new configuration options. It deep m
 
 - `config` (object): An object containing configuration options to update the widget.
 
-### `openModal()`
+### `openModal(slug | string | optional)`
 
 The `openModal` method opens the information modal.
+
+#### Parameters
+
+- `slug` (string): The slug for the section to be opened.
 
 ### `destroy()`
 

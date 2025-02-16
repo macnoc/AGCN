@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
   import Icon from "../lib/components/Icon.svelte";
 

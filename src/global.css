@@ -110,11 +110,24 @@
   font-size: 1.05rem;
   margin-bottom: 1rem;
 }
-.agcn-container .body p {
+.agcn-container .body p,
+.agcn-container .body ul,
+.agcn-container .body ol {
   margin-bottom: 1rem;
 }
-.agcn-container .body p:last-of-type {
+.agcn-container .body p:last-child,
+.agcn-container .body ul:last-child,
+.agcn-container .body ol:last-child {
   margin-bottom: 0px;
+}
+
+.agcn-container .body ul{
+  list-style: outside;
+  margin-left: 1rem;
+}
+
+.agcn-container .body ol{
+  margin-left: 1.25rem;
 }
 
 .agcn-notice {

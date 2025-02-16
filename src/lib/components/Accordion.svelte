@@ -48,6 +48,7 @@
   }
   .accordion.open {
     background-color: var(--modal-accordion-open-bg-color);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.13) inset;
   }
   .details {
     padding: 0.8rem 0.6rem;
