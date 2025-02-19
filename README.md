@@ -7,7 +7,7 @@ AGCN is a simple, lightweight JavaScript utility that helps website owners and d
 **[View Demo](https://macnoc.github.io/AGCN/)**
 
 > [!TIP]
-> We now have a WordPress plugin for AGCN! Visit our [WordPress Plugin Repository](https://github.com/macnoc/AGCN-WordPress) for easy integration with your WordPress site.
+> A WordPress plugin for AGCN is now available! Visit the [WordPress Plugin Repository](https://github.com/macnoc/AGCN-WordPress) for easy integration with WordPress sites.
 
 > [!NOTE]
 > Plesae note that this is a beta version and may contain bugs, incomplete features, or other issues. Please report any issues you encounter.
