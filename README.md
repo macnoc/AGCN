@@ -1,7 +1,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 ![Size: 41KB](https://img.shields.io/badge/Size-41KB-blue.svg)
-![Svelte: 3.42.4](https://img.shields.io/badge/Svelte-3.42.4-blue.svg)
+![Svelte: 4.2.19](https://img.shields.io/badge/Svelte-4.2.19-blue.svg)
 ![Status: Beta](https://img.shields.io/badge/Status-Beta-blue.svg)
 
 # AGCN (AI-Generated Content Notifier)
