@@ -138,7 +138,7 @@ const widget = new AGCN({
 
 The widget can be configured using the following options:
 
-- `config`: An object containing configuration options such as language, badge position, support, and whether to show the badge.
+- `config`: An object containing configuration options such as language, badge position, and whether to show the badge.
 
 - `content`: An object containing the content to be displayed in the modal and notices. This includes the header, title, body, sections, and notices.
 
@@ -149,7 +149,6 @@ The widget can be configured using the following options:
 | `language`      | `string`  | The language to use for the widget.      | `'en'`        |
 | `showBadge`     | `boolean` | Whether to show the badge on the screen. | `true`        |
 | `badgePosition` | `string`  | The position of the badge on the screen. | `'top-right'` |
-| `support`       | `boolean` | Powered-by link to Macnoc.               | `true`        |
 
 ### Content
 
@@ -200,7 +199,6 @@ Here is an example of how to configure the widget with custom content:
 const widget = new AGCN({
     config: {
         language: "en",
-        support: true,
         showBadge: true
     },
     content: {
@@ -263,7 +261,6 @@ The following CSS variables are available for customization:
   --modal-bg-color: #f8fafc;
   --modal-border-color: #cbd5e1;
   --modal-icon-color: #f1f5f9;
-  --modal-support-color: #94a3b8;
   --modal-accordion-open-bg-color: #f1f5f9;
 
   --notice-color: #64748b;

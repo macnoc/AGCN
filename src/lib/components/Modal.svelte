@@ -2,10 +2,9 @@
   import { createEventDispatcher, onMount, onDestroy } from "svelte";
   import { fly } from "svelte/transition";
   import Icon from "./Icon.svelte";
-  import Support from "../Support.svelte";
 
   export let show;
-  export let title, support;
+  export let title;
 
   const dispatch = createEventDispatcher();
   let modalEl;
@@ -99,9 +98,6 @@
       <main>
         <slot />
       </main>
-      {#if support}
-        <Support />
-      {/if}
     </section>
   </div>
 {/if}

@@ -23,6 +23,6 @@
   <Badge badgePosition={config.badgePosition} on:openModal={() => openModal()}/>
 {/if}
 
-<Modal show={showModal} on:close={closeModal} title={content[config.language]?.header} support={config.support}>
+<Modal show={showModal} on:close={closeModal} title={content[config.language]?.header}>
   <Content slug={contentSlug} sections={content[config.language]?.sections} title={content[config.language]?.title} body={content[config.language]?.body} sectionsHeader={content[config.language]?.sectionsHeader} />
 </Modal>

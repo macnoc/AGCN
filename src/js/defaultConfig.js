@@ -1,7 +1,6 @@
 const defaultConfig = {
     config: {
         language: "en",
-        support: true,
         showBadge: true
     },
     content: {
